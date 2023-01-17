@@ -3,32 +3,44 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="400.0" prefWidth="636.0"
-            style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.chatlanjavafx.ChatClientController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
-      <AnchorPane prefHeight="41.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="69.0" prefWidth="400.0" style="-fx-background-color: #171717;" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="588.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: #ffc900;" text="E" />
-            <TextField layoutX="57.0" layoutY="8.0" prefHeight="25.0" prefWidth="522.0" style="-fx-background-color: #606060;" />
-            <Button layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="22.0" style="-fx-background-color: #ffc900;" text="+">
+            <TextField id="campoMensaje" fx:id="campoMensajes" layoutX="62.0" layoutY="7.0" prefHeight="49.0" prefWidth="319.0" style="-fx-background-color: WHITE; -fx-background-radius: 40; -fx-text-fill: BLACK;">
                <font>
-                  <Font name="System Bold" size="13.0" />
+                  <Font size="14.0" />
                </font>
+            </TextField>
+            <Button id="botonAñadir" fx:id="botonAñadir" layoutX="14.0" layoutY="19.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="36.0" style="-fx-background-color: #f0c900; -fx-background-radius: 50;">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="botonEnviar" fx:id="botonEnviar" layoutX="329.0" layoutY="17.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: #f0c900; -fx-background-radius: 50;">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/send.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </children>
       </AnchorPane>
    </bottom>
    <center>
-      <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #606060;" wrapText="true" BorderPane.alignment="CENTER" />
+      <TextArea id="textArea" fx:id="textArea" editable="false" prefHeight="552.0" prefWidth="400.0" wrapText="true" BorderPane.alignment="CENTER" />
    </center>
-   <right>
-      <TextArea prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-   </right>
 </BorderPane>
